@@ -141,4 +141,15 @@ LANSKAP = {
     "senja": ("bukit-senja-flores.jpg",
               {"id": "Bukit hijau dan langit senja di Flores",
                "en": "Green hills under an evening sky in Flores"}),
+    # Banner lebar (hero halaman) — potongan resolusi tinggi dari foto lanskap
+    "b_program": ("banner-program-perbukitan.jpg",
+                  {"id": "Perbukitan dan teluk di Nusa Tenggara Timur", "en": "Hills and bays in East Nusa Tenggara"}),
+    "b_kabar": ("banner-kabar-pantai.jpg",
+                {"id": "Pantai berpasir putih dan batu karang di pesisir Flores", "en": "White-sand beach and rocky outcrop on the coast of Flores"}),
+    "b_galeri": ("banner-galeri-teluk.jpg",
+                 {"id": "Lembah keemasan dan teluk melengkung di Nusa Tenggara Timur", "en": "Golden valley and curving bay in East Nusa Tenggara"}),
+    "b_kontak": ("banner-kontak-karang.jpg",
+                 {"id": "Batu karang dan laut biru di pesisir Flores", "en": "Rocky outcrop and blue sea on the coast of Flores"}),
+    "b_dukung": ("banner-dukung-lembah.jpg",
+                 {"id": "Perbukitan keemasan di Nusa Tenggara Timur", "en": "Golden hills in East Nusa Tenggara"}),
 }

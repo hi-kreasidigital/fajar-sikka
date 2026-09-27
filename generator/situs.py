@@ -689,7 +689,7 @@ class Situs:
                  f'<button type="button" class="chip-btn" aria-pressed="true" data-saring="">{e(t["semua"])}</button>'
                  + "".join(f'<button type="button" class="chip-btn" aria-pressed="false" data-saring="{e(b)}">{e(self.bidang(b))}</button>' for b in bidang)
                  + "</div>")
-        isi = f"""{self.hero_halaman(t['program'], t['program_kami'], t['program_intro'], 'senja')}
+        isi = f"""{self.hero_halaman(t['program'], t['program_kami'], t['program_intro'], 'b_program')}
 <section class="bagian">
   <div class="wadah">
     {chips}
@@ -701,7 +701,7 @@ class Situs:
             {"@type": "ListItem", "position": i + 1, "url": self.abs(self.rd("program", p["slug"])), "name": p["nama"][lang]}
             for i, p in enumerate(self.program)]}]
         self.halaman(self.r("program"), t["program_kami"], t["program_intro"], isi, alt=dict(RUTE["program"]),
-                     og=self.fl("senja")[0].og, ld=ld, aktif="program", remah=[(t["program"], self.r("program"))])
+                     og=self.fl("b_program")[0].og, ld=ld, aktif="program", remah=[(t["program"], self.r("program"))])
         for i, pr in enumerate(self.program):
             self._detail_program(pr, i)
 
@@ -727,7 +727,7 @@ class Situs:
         lain = [p for p in self.program if p is not pr and p["bidang"] == pr["bidang"]][:3] or \
                [p for p in self.program if p is not pr][:3]
         lang_attr = ' lang="id"' if lang == "en" and pr["desk"]["en"] == pr["desk"]["id"] and pr["desk"]["id"] else ""
-        isi = f"""{self.hero_halaman(self.bidang(pr['bidang']) or t['program'], pr['nama'][lang], pr['ringkas'][lang], 'senja', foto, pr['nama'][lang])}
+        isi = f"""{self.hero_halaman(self.bidang(pr['bidang']) or t['program'], pr['nama'][lang], pr['ringkas'][lang], 'b_program', foto, pr['nama'][lang])}
 <section class="bagian">
   <div class="wadah prosa-wadah">
     <dl class="meta-daftar">{meta_html}</dl>
@@ -750,7 +750,7 @@ class Situs:
         ld[0] = {k: v for k, v in ld[0].items() if v}
         self.halaman(path, pr["nama"][lang], desk, isi,
                      alt={l: self.rd("program", pr["slug"], l) for l in LANGS},
-                     og=(foto.og if foto else self.fl("senja")[0].og), ld=ld, aktif="program",
+                     og=(foto.og if foto else self.fl("b_program")[0].og), ld=ld, aktif="program",
                      remah=[(t["program"], self.r("program")), (pr["nama"][lang], path)])
 
     def _grid_foto(self, fotos, judul, tipe="kecil"):
@@ -787,11 +787,11 @@ class Situs:
                 kat_html = ('<div class="saring">' + f'<a class="chip-btn" aria-current="page" href="{self.u(self.r("kabar"))}">{e(t["semua"])}</a>'
                             + "".join(f'<a class="chip-btn" href="{self.u(self.rd("kategori", k["slug"]))}">{e(k["nama"][lang])}</a>' for k in kat)
                             + "</div>")
-            isi = f"""{self.hero_halaman(t['kabar'], t['kabar_terbaru'], t['kabar_intro'], 'airterjun')}
+            isi = f"""{self.hero_halaman(t['kabar'], t['kabar_terbaru'], t['kabar_intro'], 'b_kabar')}
 <section class="bagian"><div class="wadah">{kat_html}{grid}{nav}</div></section>"""
             judul = t["kabar_terbaru"] + (f" — {t['halaman']} {h}" if h > 1 else "")
             alt = dict(RUTE["kabar"]) if h == 1 else {lang: path}
-            self.halaman(path, judul, t["kabar_intro"], isi, alt=alt, og=self.fl("airterjun")[0].og, aktif="kabar",
+            self.halaman(path, judul, t["kabar_intro"], isi, alt=alt, og=self.fl("b_kabar")[0].og, aktif="kabar",
                          remah=[(t["kabar"], self.r("kabar"))], lastmod=potong[0]["tgl"] if potong else None)
         # kategori
         for k in self.kategori.values():
@@ -799,7 +799,7 @@ class Situs:
             if not arts:
                 continue
             path = self.rd("kategori", k["slug"])
-            isi = f"""{self.hero_halaman(t['kategori'], k['nama'][lang], '', 'airterjun')}
+            isi = f"""{self.hero_halaman(t['kategori'], k['nama'][lang], '', 'b_kabar')}
 <section class="bagian"><div class="wadah"><div class="grid grid-3">{''.join(self.kartu_artikel(a, 'h2') for a in arts)}</div></div></section>"""
             alt = {l: self.rd("kategori", k["slug"], l) for l in LANGS
                    if l == lang or any(l == "id" or a["ada_en"] for a in k["artikel"])}
@@ -868,10 +868,10 @@ class Situs:
         else:
             pita = "".join(f'<li>{self.img(*self.fl(k), sizes="(min-width: 900px) 33vw, 50vw")}</li>' for k in ("pantai", "padar", "airterjun", "senja", "bukit"))
             grid = f'<p class="kosong">{e(t["belum_ada_galeri"])}</p><ul class="grid-foto grid-foto-lanskap">{pita}</ul>'
-        isi = f"""{self.hero_halaman(t['galeri'], t['foto_kegiatan'], t['galeri_intro'], 'bukit')}
+        isi = f"""{self.hero_halaman(t['galeri'], t['foto_kegiatan'], t['galeri_intro'], 'b_galeri')}
 <section class="bagian"><div class="wadah">{grid}</div></section>"""
         self.halaman(self.r("galeri"), t["foto_kegiatan"], t["galeri_intro"], isi, alt=dict(RUTE["galeri"]),
-                     og=self.fl("bukit")[0].og, aktif="galeri", remah=[(t["galeri"], self.r("galeri"))])
+                     og=self.fl("b_galeri")[0].og, aktif="galeri", remah=[(t["galeri"], self.r("galeri"))])
         for g in self.galeri:
             path = self.rd("galeri", g["slug"])
             prog = ""
@@ -949,7 +949,7 @@ class Situs:
   </div>
 </div>"""
         cara = "".join(f"<li>{e(x)}</li>" for x in self.baris("donasi_cara_lain"))
-        isi = f"""{self.hero_halaman(t['dukung'], t['dukung_judul'], t['dukung_cta'], 'bukit')}
+        isi = f"""{self.hero_halaman(t['dukung'], t['dukung_judul'], t['dukung_cta'], 'b_dukung')}
 <section class="bagian">
   <div class="wadah dua-kolom dua-kolom-atas">
     <div class="prosa">{self.paragraf(self.p('donasi_intro'))}
@@ -959,7 +959,7 @@ class Situs:
   </div>
 </section>"""
         self.halaman(self.r("dukung"), t["dukung_judul"], md.excerpt(self.p("donasi_intro"), 158), isi,
-                     alt=dict(RUTE["dukung"]), og=self.fl("bukit")[0].og, aktif="dukung",
+                     alt=dict(RUTE["dukung"]), og=self.fl("b_dukung")[0].og, aktif="dukung",
                      remah=[(t["dukung"], self.r("dukung"))])
 
     def hal_kontak(self):
@@ -979,7 +979,7 @@ class Situs:
         if form.startswith("https://airtable.com/"):
             emb = form if "/embed/" in form else form.replace("https://airtable.com/", "https://airtable.com/embed/")
             form_html = f'<div class="bagian-form"><h2 class="sub-judul">{e(t["formulir"])}</h2><iframe class="form-airtable" src="{e(emb)}" title="{e(t["formulir"])}" loading="lazy"></iframe></div>'
-        isi = f"""{self.hero_halaman(t['kontak'], t['hubungi_kami'], t['kontak_intro'], 'airterjun')}
+        isi = f"""{self.hero_halaman(t['kontak'], t['hubungi_kami'], t['kontak_intro'], 'b_kontak')}
 <section class="bagian">
   <div class="wadah dua-kolom dua-kolom-atas">
     <dl class="kontak-daftar">{info}</dl>
@@ -990,7 +990,7 @@ class Situs:
         ld = [dict(self.ld_org(), **{"@type": "NGO"}), {"@context": "https://schema.org", "@type": "ContactPage",
                                                        "url": self.abs(self.r("kontak")), "inLanguage": lang}]
         self.halaman(self.r("kontak"), t["hubungi_kami"], t["kontak_intro"], isi, alt=dict(RUTE["kontak"]),
-                     og=self.fl("airterjun")[0].og, ld=ld, aktif="kontak", remah=[(t["kontak"], self.r("kontak"))])
+                     og=self.fl("b_kontak")[0].og, ld=ld, aktif="kontak", remah=[(t["kontak"], self.r("kontak"))])
 
     def hal_404(self):
         t = self.t

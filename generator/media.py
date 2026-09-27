@@ -13,7 +13,7 @@ import urllib.request
 from PIL import Image, ImageOps
 
 Image.MAX_IMAGE_PIXELS = 80_000_000
-LEBAR = [480, 800, 1200, 1800]
+LEBAR = [480, 800, 1200, 1800, 2200]
 VERSI = "v1"  # ubah jika aturan pemrosesan berubah agar cache diperbarui
 
 
