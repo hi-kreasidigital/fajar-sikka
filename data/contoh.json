@@ -1,0 +1,702 @@
+{
+  "_catatan": "Data cadangan. Dipakai hanya jika AIRTABLE_TOKEN belum diatur (misalnya saat mencoba website pertama kali). Isinya sama dengan konten awal di Airtable.",
+  "Pengaturan": [
+    {
+      "id": "recP01",
+      "fields": {
+        "Kunci": "hero_judul",
+        "Keterangan": "Judul besar di beranda",
+        "Isi ID": "Maumere, rumah bagi semua.",
+        "Isi EN": "Maumere, a home for everyone."
+      }
+    },
+    {
+      "id": "recP02",
+      "fields": {
+        "Kunci": "hero_teks",
+        "Keterangan": "Teks di bawah judul beranda",
+        "Isi ID": "Fajar Sikka adalah komunitas di Maumere, Flores, yang sejak 2018 menjadi wadah bagi kelompok marginal — orang dengan keragaman gender, perempuan, janda, dan penyandang disabilitas — untuk hidup setara, bersuara, dan berdaya.",
+        "Isi EN": "Fajar Sikka is a community in Maumere, Flores, that since 2018 has been a home for marginalised groups — people of diverse genders, women, widows and people with disabilities — to live as equals, speak up and thrive."
+      }
+    },
+    {
+      "id": "recP03",
+      "fields": {
+        "Kunci": "motto",
+        "Keterangan": "Motto (beranda & tentang)",
+        "Isi ID": "Solidaritas dalam Kasih untuk Berbagi, Tumbuh, dan Berkembang Bersama.",
+        "Isi EN": "Solidarity in love: to share, to grow and to flourish together."
+      }
+    },
+    {
+      "id": "recP04",
+      "fields": {
+        "Kunci": "tentang_singkat",
+        "Keterangan": "Paragraf singkat 'Tentang kami' di beranda",
+        "Isi ID": "Kelompok marginal di Kabupaten Sikka masih menghadapi hambatan struktural untuk mengakses layanan dasar seperti administrasi kependudukan, kesehatan, dan pekerjaan yang layak. Fajar Sikka hadir untuk mendampingi, mengadvokasi hak-hak dasar, dan membangun kekuatan ekonomi komunitas yang mandiri.",
+        "Isi EN": "Marginalised groups in Sikka Regency still face structural barriers to basic services such as civil registration, healthcare and decent work. Fajar Sikka accompanies them, advocates for their basic rights and builds the community's economic self-reliance."
+      }
+    },
+    {
+      "id": "recP23",
+      "fields": {
+        "Kunci": "angka_dampak",
+        "Keterangan": "Angka di beranda. Satu per baris, format: angka|keterangan",
+        "Isi ID": "2018|Tahun berdiri di Maumere\n600|Paket bantuan darurat COVID-19 & badai Seroja\n81|Akses KTP, layanan kesehatan & bantuan sosial yang didampingi\n50|Peserta pelatihan SOGIE SC lintas latar belakang",
+        "Isi EN": "2018|Founded in Maumere\n600|Emergency aid packages (COVID-19 & Cyclone Seroja)\n81|ID cards, health cover & social assistance secured\n50|Participants in our SOGIE SC training"
+      }
+    },
+    {
+      "id": "recP05",
+      "fields": {
+        "Kunci": "latar_belakang",
+        "Keterangan": "Halaman Tentang: Latar Belakang (pisahkan paragraf dengan baris kosong)",
+        "Isi ID": "Fajar Sikka lahir di tengah keprihatinan akan nasib kelompok marginal dari berbagai kategori sosial, termasuk kelompok keragaman gender di Maumere. Sejauh ini kelompok marginal yang miskin dan terpinggirkan belum banyak mendapatkan perhatian, baik dari pemerintah maupun organisasi kemasyarakatan yang bergerak di bidang sosial kemanusiaan. Mereka masih mengalami hambatan struktural yang menyulitkan untuk mengakses layanan dasar seperti ekonomi dan kesehatan.\n\nMereka juga tidak mudah mendapatkan pekerjaan di sektor formal. Keterbatasan pendidikan dan akses sosial sering membatasi ruang kerja mereka hanya pada sektor informal yang rentan kehilangan pekerjaan. Pekerjaan yang mereka tekuni umumnya bergantung pada musim tertentu, sementara sebagian besar dari mereka juga menjadi tulang punggung keluarga.\n\nMelihat situasi ini, Fajar Sikka hadir untuk memberi perhatian dan mendorong terbangunnya kekuatan ekonomi kelompok di tingkat komunitas yang mandiri, serta keterampilan dan pengetahuan yang berpotensi mengembangkan komunitas sebagai warga masyarakat yang setara dan berdaya. Fajar Sikka juga mendorong komunitas untuk berani menyuarakan dan mengekspresikan dirinya sebagai warga negara yang setara.",
+        "Isi EN": "Fajar Sikka was born out of concern for marginalised people across many social groups, including people of diverse genders in Maumere. Poor and marginalised groups have so far received little attention from either the government or civil-society organisations working on social and humanitarian issues. They still face structural barriers to basic services such as economic opportunity and healthcare.\n\nFormal-sector jobs are also hard to come by. Limited education and social access often confine them to informal work where jobs are easily lost. Much of that work is seasonal, while many of them are also the main breadwinners for their families.\n\nIn response, Fajar Sikka works to strengthen self-reliant economic power at the community level, and to build skills and knowledge that help the community grow as equal and empowered members of society. Fajar Sikka also encourages the community to speak up and express themselves as equal citizens."
+      }
+    },
+    {
+      "id": "recP06",
+      "fields": {
+        "Kunci": "makna_nama",
+        "Keterangan": "Halaman Tentang: arti nama Fajar Sikka",
+        "Isi ID": "Nama Fajar Sikka dipilih sebagai simbol budaya dan kota Sikka, tempat warganya bisa hidup berdampingan dan saling menerima sebagai warga Sikka yang setara. Fajar bermakna awal terang yang memberi semangat, seperti sumber kasih Tuhan yang kuat.",
+        "Isi EN": "The name Fajar Sikka honours the culture of Sikka, a place where people can live side by side and accept one another as equal citizens. Fajar means dawn — the first light that gives hope, like the strong source of God's love."
+      }
+    },
+    {
+      "id": "recP07",
+      "fields": {
+        "Kunci": "visi",
+        "Keterangan": "Visi",
+        "Isi ID": "Maumere menjadi rumah bagi semua orang marginal dan miskin.",
+        "Isi EN": "Maumere as a home for all marginalised and poor people."
+      }
+    },
+    {
+      "id": "recP08",
+      "fields": {
+        "Kunci": "misi",
+        "Keterangan": "Misi (satu poin per baris)",
+        "Isi ID": "Menghapus diskriminasi sosial demi membangun kehidupan dalam keberagaman yang harmoni di dalam masyarakat.\nMelakukan advokasi untuk membangun kesetaraan dan keadilan bagi orang dengan keragaman gender, perempuan, janda, dan disabilitas.\nMendorong pengembangan potensi ekonomi mandiri komunitas yang berbasis keterampilan dan jaringan kerja kelompok.",
+        "Isi EN": "End social discrimination and build a harmonious life in diversity within society.\nAdvocate for equality and justice for people of diverse genders, women, widows and people with disabilities.\nFoster the community's economic self-reliance, grounded in skills and group networks."
+      }
+    },
+    {
+      "id": "recP09",
+      "fields": {
+        "Kunci": "tujuan",
+        "Keterangan": "Tujuan (satu poin per baris)",
+        "Isi ID": "Menjadi wadah bagi kelompok marginal seperti orang dengan keragaman gender, perempuan, janda, dan disabilitas di Kabupaten Sikka.\nMelakukan advokasi kepada Pemerintah Daerah Kabupaten Sikka agar memperhatikan hak warga negara dan hak asasi manusia kelompok ini.\nMenjadi wadah pemberdayaan bagi orang dengan keragaman gender, perempuan, janda, dan disabilitas di Kabupaten Sikka.",
+        "Isi EN": "Be a home for marginalised groups — people of diverse genders, women, widows and people with disabilities — in Sikka Regency.\nAdvocate to the Sikka Regency Government to uphold the civil and human rights of these groups.\nBe a space of empowerment for people of diverse genders, women, widows and people with disabilities in Sikka Regency."
+      }
+    },
+    {
+      "id": "recP10",
+      "fields": {
+        "Kunci": "sasaran",
+        "Keterangan": "Sasaran",
+        "Isi ID": "Orang dengan keragaman gender, perempuan, janda, dan penyandang disabilitas di Kabupaten Sikka, Maumere.",
+        "Isi EN": "People of diverse genders, women, widows and people with disabilities in Sikka Regency, Maumere."
+      }
+    },
+    {
+      "id": "recP11",
+      "fields": {
+        "Kunci": "alamat",
+        "Keterangan": "Alamat lengkap (kontak & footer)",
+        "Isi ID": "Jl. Nairoa, RT09/RW04, Desa Habi, Kecamatan Kangae, Kabupaten Sikka, Flores, Nusa Tenggara Timur, Indonesia",
+        "Isi EN": "Jl. Nairoa, RT09/RW04, Habi Village, Kangae District, Sikka Regency, Flores, East Nusa Tenggara, Indonesia"
+      }
+    },
+    {
+      "id": "recP12",
+      "fields": {
+        "Kunci": "telepon",
+        "Keterangan": "Nomor telepon yang ditampilkan",
+        "Isi ID": "0821 2477 4309",
+        "Isi EN": "+62 821 2477 4309"
+      }
+    },
+    {
+      "id": "recP13",
+      "fields": {
+        "Kunci": "whatsapp",
+        "Keterangan": "Nomor WhatsApp format internasional tanpa + (contoh 6282124774309). Kosongkan jika tidak ada.",
+        "Isi ID": "6282124774309",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP14",
+      "fields": {
+        "Kunci": "email",
+        "Keterangan": "Email resmi",
+        "Isi ID": "fajarsikka@gmail.com",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP15",
+      "fields": {
+        "Kunci": "instagram",
+        "Keterangan": "Link Instagram lengkap (https://...). Kosongkan jika tidak ada.",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP16",
+      "fields": {
+        "Kunci": "facebook",
+        "Keterangan": "Link Facebook lengkap (https://...). Kosongkan jika tidak ada.",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP17",
+      "fields": {
+        "Kunci": "donasi_intro",
+        "Keterangan": "Halaman Dukung: paragraf pembuka",
+        "Isi ID": "Setiap dukungan membantu kami mendampingi transpuan, perempuan, janda, lansia, dan penyandang disabilitas di Sikka — mulai dari pengurusan KTP dan layanan kesehatan, bantuan darurat saat sakit atau bencana, hingga pelatihan usaha.",
+        "Isi EN": "Every contribution helps us support trans women, women, widows, older people and people with disabilities in Sikka — from securing ID cards and healthcare, to emergency help during illness or disaster, to livelihood training."
+      }
+    },
+    {
+      "id": "recP18",
+      "fields": {
+        "Kunci": "rekening_bank",
+        "Keterangan": "Nama bank untuk donasi. KOSONGKAN jika belum ada — website akan menampilkan kontak email saja.",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP19",
+      "fields": {
+        "Kunci": "rekening_nomor",
+        "Keterangan": "Nomor rekening donasi",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP20",
+      "fields": {
+        "Kunci": "rekening_nama",
+        "Keterangan": "Atas nama rekening",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    },
+    {
+      "id": "recP21",
+      "fields": {
+        "Kunci": "donasi_cara_lain",
+        "Keterangan": "Halaman Dukung: bentuk dukungan lain (satu poin per baris)",
+        "Isi ID": "Menjadi mitra program atau lembaga donor\nMembeli kain tenun ikat karya transpuan Maumere\nMenjadi relawan atau narasumber pelatihan\nMengundang Fajar Sikka sebagai narasumber diskusi",
+        "Isi EN": "Partner with us on a programme or as a funding organisation\nBuy ikat textiles woven by trans women in Maumere\nVolunteer or lead a training session\nInvite Fajar Sikka to speak at your event"
+      }
+    },
+    {
+      "id": "recP22",
+      "fields": {
+        "Kunci": "formulir_kontak",
+        "Keterangan": "Opsional: link 'share form' Airtable untuk formulir kontak (https://airtable.com/...). Kosongkan jika tidak dipakai.",
+        "Isi ID": "",
+        "Isi EN": ""
+      }
+    }
+  ],
+  "Kategori": [
+    {
+      "id": "recK01",
+      "fields": {
+        "Nama": "Kegiatan",
+        "Nama EN": "Activities",
+        "Slug": "kegiatan"
+      }
+    },
+    {
+      "id": "recK02",
+      "fields": {
+        "Nama": "Advokasi",
+        "Nama EN": "Advocacy",
+        "Slug": "advokasi"
+      }
+    },
+    {
+      "id": "recK03",
+      "fields": {
+        "Nama": "Pemberdayaan Ekonomi",
+        "Nama EN": "Economic Empowerment",
+        "Slug": "pemberdayaan-ekonomi"
+      }
+    },
+    {
+      "id": "recK04",
+      "fields": {
+        "Nama": "Cerita Komunitas",
+        "Nama EN": "Community Stories",
+        "Slug": "cerita-komunitas"
+      }
+    }
+  ],
+  "Mitra": [
+    {
+      "id": "recM01",
+      "fields": {
+        "Nama": "GAYa NUSANTARA",
+        "Bentuk Kerja Sama": "Pelatihan SOGIE SC (2019) dan program Leadership Academia (2021–2022).",
+        "Bentuk Kerja Sama EN": "SOGIE SC training (2019) and the Leadership Academia programme (2021–2022).",
+        "Urutan": 1,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM02",
+      "fields": {
+        "Nama": "OutRight International",
+        "Bentuk Kerja Sama": "Mendukung program advokasi hak kelompok rentan di Sikka dan Flores Timur (2021–2023).",
+        "Bentuk Kerja Sama EN": "Supported advocacy for the rights of vulnerable groups in Sikka and East Flores (2021–2023).",
+        "Urutan": 2,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM03",
+      "fields": {
+        "Nama": "LBH Masyarakat",
+        "Bentuk Kerja Sama": "TOT advokasi kebijakan anti-diskriminasi (2022) dan advokasi kebijakan daerah ramah HAM (2022–2023).",
+        "Bentuk Kerja Sama EN": "Anti-discrimination policy advocacy training of trainers (2022) and advocacy for human-rights-friendly local policy (2022–2023).",
+        "Urutan": 3,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM04",
+      "fields": {
+        "Nama": "PBH Nusra",
+        "Bentuk Kerja Sama": "Advokasi kebijakan daerah ramah HAM bagi kelompok rentan di Kabupaten Sikka (2022–2023).",
+        "Bentuk Kerja Sama EN": "Advocacy for human-rights-friendly local policy for vulnerable groups in Sikka Regency (2022–2023).",
+        "Urutan": 4,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM05",
+      "fields": {
+        "Nama": "AFSC / Yayasan Keadilan dan Perdamaian Indonesia",
+        "Bentuk Kerja Sama": "Distribusi bantuan COVID-19, pemetaan kondisi komunitas transgender di Sikka, dan kerangka kerja penguatan hak kelompok marginal di NTT.",
+        "Bentuk Kerja Sama EN": "COVID-19 aid distribution, mapping of the transgender community in Sikka, and a framework for strengthening the rights of marginalised groups in East Nusa Tenggara.",
+        "Urutan": 5,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM06",
+      "fields": {
+        "Nama": "YVOS Indonesia",
+        "Bentuk Kerja Sama": "Mitra distribusi bantuan COVID-19 dan ketahanan pangan melalui pertanian organik (2020).",
+        "Bentuk Kerja Sama EN": "Partner for COVID-19 aid distribution and food security through organic farming (2020).",
+        "Urutan": 6,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM07",
+      "fields": {
+        "Nama": "Pusat Kajian Gender dan Seksualitas STFT Jakarta",
+        "Bentuk Kerja Sama": "Membantu penjualan kain tenun karya transpuan Maumere; Fajar Sikka menjadi narasumber kegiatan STFT Jakarta.",
+        "Bentuk Kerja Sama EN": "Helps sell ikat textiles woven by trans women in Maumere; Fajar Sikka speaks at STFT Jakarta events.",
+        "Urutan": 7,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM08",
+      "fields": {
+        "Nama": "STFK Ledalero, Maumere",
+        "Bentuk Kerja Sama": "Bedah buku 'Alkitab dari perspektif transgender'; Fajar Sikka menjadi tempat riset calon pastor tentang keragaman gender dalam konteks Gereja Katolik.",
+        "Bentuk Kerja Sama EN": "Book discussion on 'The Bible from a transgender perspective'; Fajar Sikka hosts seminarians researching gender diversity in the Catholic Church.",
+        "Urutan": 8,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM09",
+      "fields": {
+        "Nama": "Konde.co & AMAN Indonesia",
+        "Bentuk Kerja Sama": "Program Women, Diversity and Peace; dukungan pride Hari HAM 2022; berbagi pengetahuan SOGIE SC dan media.",
+        "Bentuk Kerja Sama EN": "Women, Diversity and Peace programme; support for the 2022 Human Rights Day pride; knowledge-sharing on SOGIE SC and media.",
+        "Urutan": 9,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM10",
+      "fields": {
+        "Nama": "KBR 68H & Komunitas KAHE Maumere",
+        "Bentuk Kerja Sama": "Pameran foto dan talkshow 'Rawat Hak Dasar' di Maumere (2022).",
+        "Bentuk Kerja Sama EN": "'Rawat Hak Dasar' (Care for Basic Rights) photo exhibition and talk show in Maumere (2022).",
+        "Urutan": 10,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM11",
+      "fields": {
+        "Nama": "Perhimpunan Pengacara Masyarakat Adat Nusantara (PPMAN)",
+        "Bentuk Kerja Sama": "Teman diskusi dan fasilitator pelatihan yang diselenggarakan Fajar Sikka.",
+        "Bentuk Kerja Sama EN": "Discussion partner and facilitator for trainings run by Fajar Sikka.",
+        "Urutan": 11,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM12",
+      "fields": {
+        "Nama": "Ikatan Waria Lembata (IWL) & IKWAL Flores Timur",
+        "Bentuk Kerja Sama": "Kerja sama program advokasi dan solidaritas antar-komunitas waria di Flores dan Lembata.",
+        "Bentuk Kerja Sama EN": "Joint advocacy and solidarity work among trans women's communities in Flores and Lembata.",
+        "Urutan": 12,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recM13",
+      "fields": {
+        "Nama": "YLBH Justitia, Kupang",
+        "Bentuk Kerja Sama": "Lembaga payung untuk pengelolaan administrasi dan keuangan program Fajar Sikka.",
+        "Bentuk Kerja Sama EN": "Umbrella organisation managing administration and finances for Fajar Sikka's programmes.",
+        "Urutan": 13,
+        "Tampilkan": true
+      }
+    }
+  ],
+  "Program": [
+    {
+      "id": "recR01",
+      "fields": {
+        "Nama": "Pelatihan SOGIE SC",
+        "Slug": "pelatihan-sogie-sc-2019",
+        "Status": "Terbit",
+        "Periode": "2019",
+        "Tahun": 2019,
+        "Lokasi": "Maumere",
+        "Bidang": "Pendidikan & Pengembangan Diri",
+        "Mitra": [
+          "recM01"
+        ],
+        "Ringkasan": "Pelatihan tentang orientasi seksual, identitas & ekspresi gender, dan karakteristik seks bagi 50 peserta lintas latar belakang.",
+        "Deskripsi": "Pelatihan SOGIE SC (*sexual orientation, gender identity and expression, and sex characteristics*) diselenggarakan di Maumere bersama GAYa NUSANTARA. Sebanyak **50 peserta** hadir, terdiri dari kelompok LGBT, tokoh agama, aktivis HAM, dan dosen.",
+        "Nama EN": "SOGIE SC Training",
+        "Ringkasan EN": "Training on sexual orientation, gender identity and expression, and sex characteristics for 50 participants from diverse backgrounds.",
+        "Deskripsi EN": "The SOGIE SC (sexual orientation, gender identity and expression, and sex characteristics) training was held in Maumere with GAYa NUSANTARA. **50 participants** attended, including LGBT people, religious leaders, human rights activists and university lecturers."
+      }
+    },
+    {
+      "id": "recR02",
+      "fields": {
+        "Nama": "Workshop Media & Keamanan Digital bagi Transpuan",
+        "Slug": "workshop-media-keamanan-2019",
+        "Status": "Terbit",
+        "Periode": "2019",
+        "Tahun": 2019,
+        "Lokasi": "Maumere",
+        "Bidang": "Media & Publikasi",
+        "Ringkasan": "Workshop internal tentang media dan sistem keamanan bagi 20 transpuan di Sikka.",
+        "Deskripsi": "Workshop internal tentang pemanfaatan media dan sistem keamanan bagi kelompok transpuan di Kabupaten Sikka, diikuti oleh **20 orang**.",
+        "Nama EN": "Media & Safety Workshop for Trans Women",
+        "Ringkasan EN": "An internal workshop on media and safety for 20 trans women in Sikka.",
+        "Deskripsi EN": "An internal workshop on using media and on personal safety systems for trans women in Sikka Regency, attended by **20 people**."
+      }
+    },
+    {
+      "id": "recR03",
+      "fields": {
+        "Nama": "Advokasi Adminduk & Layanan Kesehatan",
+        "Slug": "advokasi-adminduk-kesehatan",
+        "Status": "Terbit",
+        "Periode": "2019–2020",
+        "Tahun": 2020,
+        "Lokasi": "Kabupaten Sikka",
+        "Bidang": "Advokasi & HAM",
+        "Ringkasan": "Pendampingan KTP, Kartu Sikka Sehat, BLT-Desa, dan Bantuan Sosial Tunai bagi transpuan dan perempuan janda.",
+        "Deskripsi": "Advokasi struktural agar transpuan dan perempuan janda bisa mengakses hak dasarnya sebagai warga negara:\n\n- KTP untuk **12 transpuan** dan **4 perempuan janda**\n- Layanan kesehatan Sikka Sehat untuk **25 transpuan**\n- BLT-Desa untuk **10 transpuan**\n- Bantuan Sosial Tunai untuk **30 transpuan**",
+        "Nama EN": "Civil Registration & Healthcare Advocacy",
+        "Ringkasan EN": "Helping trans women and widows obtain ID cards, public health cover and government cash assistance.",
+        "Deskripsi EN": "Structural advocacy so that trans women and widows can access their basic rights as citizens:\n\n- ID cards for **12 trans women** and **4 widows**\n- Sikka Sehat health cover for **25 trans women**\n- Village cash transfers (BLT-Desa) for **10 trans women**\n- Social cash assistance for **30 trans women**"
+      }
+    },
+    {
+      "id": "recR04",
+      "fields": {
+        "Nama": "Ketahanan Pangan lewat Pertanian Organik",
+        "Slug": "ketahanan-pangan-pertanian-organik",
+        "Status": "Terbit",
+        "Periode": "2020",
+        "Tahun": 2020,
+        "Lokasi": "Maumere & Paga",
+        "Bidang": "Pemberdayaan Ekonomi",
+        "Mitra": [
+          "recM06"
+        ],
+        "Ringkasan": "Membangun ketahanan pangan komunitas selama pandemi COVID-19 melalui pertanian organik.",
+        "Deskripsi": "Di masa pandemi COVID-19, Fajar Sikka bersama YVOS membangun ketahanan pangan komunitas melalui pertanian organik di dua wilayah: **Maumere** dan **Paga**.",
+        "Nama EN": "Food Security through Organic Farming",
+        "Ringkasan EN": "Building community food security during the COVID-19 pandemic through organic farming.",
+        "Deskripsi EN": "During the COVID-19 pandemic, Fajar Sikka and YVOS built community food security through organic farming in two areas: **Maumere** and **Paga**."
+      }
+    },
+    {
+      "id": "recR05",
+      "fields": {
+        "Nama": "Bantuan COVID-19",
+        "Slug": "bantuan-covid-19",
+        "Status": "Terbit",
+        "Periode": "2020",
+        "Tahun": 2020,
+        "Lokasi": "Paga, Wuring, Nangahale, Nangahure, Kangae, Alok Timur",
+        "Bidang": "Tanggap Darurat",
+        "Mitra": [
+          "recM05",
+          "recM06"
+        ],
+        "Ringkasan": "Distribusi 300 paket bantuan COVID-19 di enam wilayah Kabupaten Sikka.",
+        "Deskripsi": "Bersama AFSC, Fajar Sikka membagikan **300 paket bantuan** COVID-19 di Paga, Wuring, Nangahale, Nangahure, Kangae, dan Alok Timur.",
+        "Nama EN": "COVID-19 Relief",
+        "Ringkasan EN": "Distributing 300 COVID-19 relief packages across six areas of Sikka Regency.",
+        "Deskripsi EN": "With AFSC, Fajar Sikka distributed **300 COVID-19 relief packages** in Paga, Wuring, Nangahale, Nangahure, Kangae and Alok Timur."
+      }
+    },
+    {
+      "id": "recR06",
+      "fields": {
+        "Nama": "Tanggap Darurat Badai Seroja",
+        "Slug": "tanggap-darurat-badai-seroja",
+        "Status": "Terbit",
+        "Periode": "2021",
+        "Tahun": 2021,
+        "Lokasi": "Pesisir Sikka, Lembata, Adonara",
+        "Bidang": "Tanggap Darurat",
+        "Ringkasan": "Penggalangan dana dan distribusi 300 paket bantuan bagi korban badai Seroja.",
+        "Deskripsi": "Fajar Sikka menggalang dana dan menyalurkan bantuan bagi korban badai Seroja:\n\n- Pesisir Sikka: **50 paket**\n- Lembata: **150 paket**\n- Adonara: **100 paket**",
+        "Nama EN": "Cyclone Seroja Emergency Response",
+        "Ringkasan EN": "Fundraising and distribution of 300 aid packages for survivors of Cyclone Seroja.",
+        "Deskripsi EN": "Fajar Sikka raised funds and delivered aid to survivors of Cyclone Seroja:\n\n- Sikka coast: **50 packages**\n- Lembata: **150 packages**\n- Adonara: **100 packages**"
+      }
+    },
+    {
+      "id": "recR07",
+      "fields": {
+        "Nama": "Advokasi Hak Kelompok Rentan di Sikka & Flores Timur",
+        "Slug": "advokasi-hak-kelompok-rentan-2022",
+        "Status": "Terbit",
+        "Periode": "Des 2021 – Mei 2022",
+        "Tahun": 2022,
+        "Lokasi": "Kabupaten Sikka & Flores Timur",
+        "Bidang": "Advokasi & HAM",
+        "Mitra": [
+          "recM02",
+          "recM12"
+        ],
+        "Ringkasan": "Program advokasi hak-hak kelompok rentan di dua kabupaten, didukung OutRight International.",
+        "Deskripsi": "Program advokasi hak-hak kelompok rentan di Kabupaten Sikka dan Flores Timur, didukung oleh OutRight International, bersama jaringan komunitas waria di Flores.",
+        "Nama EN": "Advocacy for Vulnerable Groups in Sikka & East Flores",
+        "Ringkasan EN": "Rights advocacy for vulnerable groups in two regencies, supported by OutRight International.",
+        "Deskripsi EN": "An advocacy programme for the rights of vulnerable groups in Sikka and East Flores regencies, supported by OutRight International, together with trans women's community networks in Flores."
+      }
+    },
+    {
+      "id": "recR08",
+      "fields": {
+        "Nama": "TOT Advokasi Kebijakan Anti-Diskriminasi",
+        "Slug": "tot-advokasi-anti-diskriminasi",
+        "Status": "Terbit",
+        "Periode": "2022",
+        "Tahun": 2022,
+        "Lokasi": "Kabupaten Sikka",
+        "Bidang": "Advokasi & HAM",
+        "Mitra": [
+          "recM03"
+        ],
+        "Ringkasan": "Training of trainers bagi aktivis hukum dan HAM di Kabupaten Sikka.",
+        "Deskripsi": "Training of Trainers (TOT) advokasi kebijakan anti-diskriminasi bagi aktivis hukum dan hak asasi manusia di Kabupaten Sikka, bekerja sama dengan LBH Masyarakat.",
+        "Nama EN": "Anti-Discrimination Policy Advocacy TOT",
+        "Ringkasan EN": "Training of trainers for legal and human rights activists in Sikka Regency.",
+        "Deskripsi EN": "A Training of Trainers (TOT) on anti-discrimination policy advocacy for legal and human rights activists in Sikka Regency, in partnership with LBH Masyarakat."
+      }
+    },
+    {
+      "id": "recR09",
+      "fields": {
+        "Nama": "Pemetaan Kondisi Komunitas Transgender",
+        "Slug": "pemetaan-komunitas-transgender",
+        "Status": "Terbit",
+        "Periode": "2022",
+        "Tahun": 2022,
+        "Lokasi": "Kabupaten Sikka",
+        "Bidang": "Advokasi & HAM",
+        "Mitra": [
+          "recM05"
+        ],
+        "Ringkasan": "Pemetaan kondisi komunitas transgender di Kabupaten Sikka sebagai dasar advokasi.",
+        "Deskripsi": "Pemetaan kondisi komunitas transgender di Kabupaten Sikka, bekerja sama dengan Yayasan Keadilan dan Perdamaian Indonesia, sebagai dasar perencanaan program dan advokasi.",
+        "Nama EN": "Mapping the Transgender Community",
+        "Ringkasan EN": "Mapping the situation of the transgender community in Sikka Regency as a basis for advocacy.",
+        "Deskripsi EN": "A mapping of the situation of the transgender community in Sikka Regency, in partnership with Yayasan Keadilan dan Perdamaian Indonesia, to inform programme planning and advocacy."
+      }
+    },
+    {
+      "id": "recR10",
+      "fields": {
+        "Nama": "Pameran Foto & Talkshow Rawat Hak Dasar",
+        "Slug": "pameran-foto-rawat-hak-dasar",
+        "Status": "Terbit",
+        "Periode": "2022",
+        "Tahun": 2022,
+        "Lokasi": "Maumere",
+        "Bidang": "Media & Publikasi",
+        "Mitra": [
+          "recM10"
+        ],
+        "Ringkasan": "Pameran foto dan talkshow tentang hak dasar kelompok rentan di Maumere.",
+        "Deskripsi": "Pameran foto dan talkshow **Rawat Hak Dasar** di Maumere, bekerja sama dengan KBR 68H dan Komunitas KAHE Maumere.",
+        "Nama EN": "'Care for Basic Rights' Photo Exhibition & Talk",
+        "Ringkasan EN": "A photo exhibition and talk show on the basic rights of vulnerable groups in Maumere.",
+        "Deskripsi EN": "The **Rawat Hak Dasar** (Care for Basic Rights) photo exhibition and talk show in Maumere, in partnership with KBR 68H and Komunitas KAHE Maumere."
+      }
+    },
+    {
+      "id": "recR11",
+      "fields": {
+        "Nama": "Advokasi Kebijakan Daerah Ramah HAM",
+        "Slug": "advokasi-kebijakan-daerah-ramah-ham",
+        "Status": "Terbit",
+        "Periode": "Nov 2022 – Jun 2023",
+        "Tahun": 2023,
+        "Lokasi": "Kabupaten Sikka",
+        "Bidang": "Advokasi & HAM",
+        "Mitra": [
+          "recM04",
+          "recM03",
+          "recM02"
+        ],
+        "Ringkasan": "Advokasi dan kampanye kebijakan daerah yang ramah HAM bagi kelompok rentan.",
+        "Deskripsi": "Advokasi kebijakan daerah ramah HAM bagi kelompok rentan dan kampanye publik di Kabupaten Sikka, berkolaborasi dengan PBH Nusra, LBH Masyarakat, dan OutRight International.",
+        "Nama EN": "Advocacy for Human-Rights-Friendly Local Policy",
+        "Ringkasan EN": "Advocacy and campaigning for local policy that protects the rights of vulnerable groups.",
+        "Deskripsi EN": "Advocacy for human-rights-friendly local policy for vulnerable groups, alongside a public campaign in Sikka Regency, in collaboration with PBH Nusra, LBH Masyarakat and OutRight International."
+      }
+    },
+    {
+      "id": "recR12",
+      "fields": {
+        "Nama": "Dukungan bagi Anggota yang Sakit & Berduka",
+        "Slug": "dukungan-sakit-berduka",
+        "Status": "Terbit",
+        "Periode": "Berkelanjutan",
+        "Lokasi": "Kabupaten Sikka",
+        "Bidang": "Kesejahteraan & Kesehatan",
+        "Ringkasan": "Bantuan dana dan sembako secara berkala bagi transgender dan keluarga yang sakit atau berduka.",
+        "Deskripsi": "Fajar Sikka memberikan dukungan dana serta sembako secara berkala bagi transgender dan keluarganya yang sedang sakit, maupun keluarga yang ditinggal anggota yang meninggal dunia.",
+        "Nama EN": "Support for Members Who Are Ill or Bereaved",
+        "Ringkasan EN": "Regular financial and food support for transgender people and families facing illness or loss.",
+        "Deskripsi EN": "Fajar Sikka regularly provides financial support and basic food supplies to transgender people and their families during illness, and to families who have lost a loved one."
+      }
+    }
+  ],
+  "Pengurus": [
+    {
+      "id": "recU01",
+      "fields": {
+        "Nama": "Hendrika Mayora Viktoria",
+        "Jabatan": "Ketua",
+        "Jabatan EN": "Chair",
+        "Kelompok": "Pengurus Inti",
+        "Urutan": 1,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recU02",
+      "fields": {
+        "Nama": "Yolanda Adam",
+        "Jabatan": "Sekretaris",
+        "Jabatan EN": "Secretary",
+        "Kelompok": "Pengurus Inti",
+        "Urutan": 2,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recU03",
+      "fields": {
+        "Nama": "Ludcia Natalia",
+        "Jabatan": "Bendahara",
+        "Jabatan EN": "Treasurer",
+        "Kelompok": "Pengurus Inti",
+        "Urutan": 3,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recU04",
+      "fields": {
+        "Nama": "Khanis Suvianita",
+        "Jabatan": "Penasehat",
+        "Jabatan EN": "Advisor",
+        "Kelompok": "Penasehat",
+        "Urutan": 10,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recU05",
+      "fields": {
+        "Nama": "Petrus Selestinus Dado",
+        "Jabatan": "Penasehat",
+        "Jabatan EN": "Advisor",
+        "Kelompok": "Penasehat",
+        "Urutan": 11,
+        "Tampilkan": true
+      }
+    },
+    {
+      "id": "recU06",
+      "fields": {
+        "Nama": "Pater Jhon Prior",
+        "Jabatan": "Penasehat",
+        "Jabatan EN": "Advisor",
+        "Kelompok": "Penasehat",
+        "Urutan": 12,
+        "Tampilkan": true
+      }
+    }
+  ],
+  "Artikel": [
+    {
+      "id": "recA01",
+      "fields": {
+        "Judul": "Contoh artikel: cara menulis Kabar di Airtable",
+        "Slug": "contoh-artikel",
+        "Status": "Draf",
+        "Tanggal Terbit": "2026-09-27",
+        "Kategori": [
+          "recK04"
+        ],
+        "Penulis": "Tim Media Fajar Sikka",
+        "Ringkasan": "Artikel contoh untuk editor. Biarkan berstatus Draf — tidak akan tampil di website.",
+        "Isi": "Ini contoh isi artikel. Anda bisa memakai **huruf tebal**, *miring*, dan [tautan](https://example.org).\n\n## Subjudul\n\nPisahkan paragraf dengan baris kosong. Daftar juga bisa:\n\n- poin pertama\n- poin kedua\n\nUntuk menyisipkan foto dari kolom **Foto Artikel**, ketik di baris tersendiri:\n\n[foto:1]\n\n> Kutipan ditulis dengan tanda > di awal baris.",
+        "Keterangan Foto Sampul": "",
+        "Izin Foto": false,
+        "Judul EN": "",
+        "Ringkasan EN": "",
+        "Isi EN": ""
+      }
+    }
+  ],
+  "Galeri": []
+}
