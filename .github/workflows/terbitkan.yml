@@ -1,0 +1,66 @@
+name: Bangun & terbitkan website
+
+on:
+  # 1) Setiap ada perubahan kode/tampilan di repo
+  push:
+    branches: [main]
+  # 2) Otomatis 2x sehari untuk mengambil konten terbaru dari Airtable
+  #    (jam dalam UTC: 22:07 UTC = 06:07 WITA, 10:07 UTC = 18:07 WITA)
+  schedule:
+    - cron: "7 22 * * *"
+    - cron: "7 10 * * *"
+  # 3) Tombol manual: tab Actions → "Bangun & terbitkan website" → Run workflow
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bangun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Mendeteksi alamat website (github.io atau domain sendiri) secara otomatis
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      # Simpan foto yang sudah diproses agar build berikutnya cepat
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: foto-${{ github.run_id }}
+          restore-keys: foto-
+
+      - name: Bangun website dari Airtable
+        run: python build.py
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  terbitkan:
+    needs: bangun
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
