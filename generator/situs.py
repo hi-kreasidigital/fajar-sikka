@@ -103,7 +103,6 @@ class Situs:
             self.hal_mitra()
             self.hal_dukung()
             self.hal_kontak()
-            self.rss()
         self.lang, self.t = "id", T["id"]
         self.hal_404()
         self.berkas_seo()
@@ -133,8 +132,21 @@ class Situs:
             shutil.copyfile(os.path.join(a, "logo", f), os.path.join(self.dist, "aset", f))
         shutil.copyfile(os.path.join(a, "og-default.jpg"), os.path.join(self.dist, "aset", "og-default.jpg"))
         self.lanskap = {}
+        hilang = []
         for k, (f, alt) in LANSKAP.items():
-            self.lanskap[k] = (self.media.dari_file(os.path.join(a, "foto", f), "flores-" + os.path.splitext(f)[0], og=True), alt)
+            path = os.path.join(a, "foto", f)
+            im = self.media.dari_file(path, "flores-" + os.path.splitext(f)[0], og=True) if os.path.exists(path) else None
+            if im is None:
+                hilang.append(f)
+            self.lanskap[k] = (im, alt)
+        ada = [v for v in self.lanskap.values() if v[0]]
+        if not ada:
+            raise SystemExit("Tidak ada satu pun foto lanskap di assets/foto/. Unggah kembali foto-fotonya.")
+        for k, v in self.lanskap.items():  # foto yang hilang diganti foto lain agar build tidak gagal
+            if v[0] is None:
+                self.lanskap[k] = ada[sum(map(ord, k)) % len(ada)]
+        if hilang:
+            print("⚠ Foto tidak ditemukan di assets/foto/ (diganti foto lain): " + ", ".join(hilang))
         with open(os.path.join(self.dist, ".nojekyll"), "w") as f:
             f.write("")
 
@@ -356,7 +368,6 @@ class Situs:
             f'<li><a href="{self.u(self.r(k))}"{" aria-current=page" if aktif == k else ""}>{e(n)}</a></li>' for k, n in nav)
         if indeks:
             self.sitemap.append((dict(alt), lastmod or self.today))
-        rss = self.u("/en/rss.xml" if lang == "en" else "/rss.xml")
         doc = f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -379,7 +390,6 @@ class Situs:
 <link rel="icon" type="image/png" sizes="32x32" href="{self.u('/aset/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="192x192" href="{self.u('/aset/favicon-192.png')}">
 <link rel="apple-touch-icon" href="{self.u('/aset/apple-touch-icon.png')}">
-<link rel="alternate" type="application/rss+xml" title="{e(self.org)} — {e(t['kabar'])}" href="{rss}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
@@ -447,7 +457,7 @@ class Situs:
   </div>
   <div class="wadah kaki-bawah">
     <p>© {self.cfg.get('tahun_berdiri', 2018)}–{th} {e(self.org)}. {e(t['foto_lanskap'])}</p>
-    <p><a href="{self.u(tukar)}" hreflang="{lainnya}" lang="{lainnya}">{e(t['ganti_bahasa'])}</a> · <a href="{self.u('/en/rss.xml' if self.lang == 'en' else '/rss.xml')}">{e(t['berlangganan_rss'])}</a></p>
+    <p><a href="{self.u(tukar)}" hreflang="{lainnya}" lang="{lainnya}">{e(t['ganti_bahasa'])}</a></p>
   </div>
 </footer>"""
 
@@ -644,7 +654,8 @@ class Situs:
         for kode, label in kelompok:
             orang_ = [p for p in self.pengurus if p["kelompok"] == kode]
             if orang_:
-                tim += f'<h3 class="sub-judul">{e(label)}</h3><ul class="orang-grid">{"".join(orang(p) for p in orang_)}</ul>'
+                sub = "" if kode == "Pengurus Inti" else f'<h3 class="sub-judul">{e(label)}</h3>'
+                tim += f'{sub}<ul class="orang-grid">{"".join(orang(p) for p in orang_)}</ul>'
         isi = f"""{self.hero_halaman(t['tentang_kami'], self.org, self.p('hero_judul'), 'pantai')}
 <section class="bagian">
   <div class="wadah prosa-wadah">
@@ -656,18 +667,26 @@ class Situs:
     </div>
   </div>
 </section>
-<section class="bagian bagian-gelap">
+<section class="bagian bagian-gelap" aria-labelledby="judul-visi">
   <div class="wadah">
     <div class="visi">
       <p class="label">{e(t['visi'])}</p>
-      <p class="visi-teks">{e(self.p('visi'))}</p>
+      <h2 class="visi-teks" id="judul-visi">{e(self.p('visi'))}</h2>
     </div>
-    <div class="grid grid-2 vm">
-      <div><h2 class="sub-judul-terang">{e(t['misi'])}</h2><ol class="daftar-angka">{misi}</ol></div>
-      <div><h2 class="sub-judul-terang">{e(t['tujuan'])}</h2><ol class="daftar-angka">{tujuan}</ol>
-        <h2 class="sub-judul-terang">{e(t['sasaran'])}</h2><p>{e(self.p('sasaran'))}</p></div>
-    </div>
+    <h3 class="sub-judul-terang sub-tengah">{e(t['misi'])}</h3>
+    <ol class="misi-grid">{misi}</ol>
     <p class="motto-baris"><span>{e(t['motto'])}</span> “{e(self.p('motto').rstrip('.'))}.”</p>
+  </div>
+</section>
+<section class="bagian bagian-putih" aria-labelledby="judul-tujuan">
+  <div class="wadah">
+    {self.judul_bagian(t['tentang_kami'], t['tujuan_sasaran'], id_="judul-tujuan")}
+    <h3 class="sub-judul">{e(t['tujuan'])}</h3>
+    <ol class="tujuan-grid">{tujuan}</ol>
+    <div class="sasaran">
+      <p class="label">{e(t['sasaran'])}</p>
+      <p class="sasaran-teks">{e(self.p('sasaran'))}</p>
+    </div>
   </div>
 </section>
 <section class="bagian">
@@ -1007,23 +1026,7 @@ class Situs:
 </section>"""
         self.halaman("/404.html", t["halaman_tidak_ada"], t["halaman_tidak_ada_teks"], isi, indeks=False)
 
-    # ---------- RSS, sitemap, robots, CNAME ----------
-    def rss(self):
-        t, lang = self.t, self.lang
-        arts = [a for a in self.artikel if lang == "id" or a["ada_en"]][:30]
-        items = "".join(f"""<item><title>{e(a['judul'][lang])}</title><link>{e(self.abs(self.rd('kabar', a['slug'])))}</link>
-<guid isPermaLink="true">{e(self.abs(self.rd('kabar', a['slug'])))}</guid><pubDate>{dt.datetime.combine(a['tgl'], dt.time(8)).strftime('%a, %d %b %Y %H:%M:%S +0800')}</pubDate>
-<description>{e(a['ringkas'][lang])}</description></item>""" for a in arts)
-        path = "/en/rss.xml" if lang == "en" else "/rss.xml"
-        self.tulis(path, f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
-<title>{e(self.org)} — {e(t['kabar'])}</title><link>{e(self.abs(self.r('kabar')))}</link>
-<atom:link href="{e(self.abs(path))}" rel="self" type="application/rss+xml"/>
-<description>{e(t['kabar_intro'])}</description><language>{lang}</language>
-{items}
-</channel></rss>
-""")
-
+    # ---------- sitemap, robots, CNAME ----------
     def berkas_seo(self):
         rows = []
         for alt, lastmod in self.sitemap:
