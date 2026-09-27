@@ -1,0 +1,11 @@
+{
+  "alamat_website": "",
+  "_alamat_website": "BIARKAN KOSONG agar alamat terdeteksi otomatis dari GitHub Pages (termasuk setelah domain sendiri dipasang). Isi hanya jika ingin memaksa alamat tertentu, contoh: https://fajarsikka.org",
+
+  "airtable_base_id": "appVXZEgHGCFTTw58",
+  "_airtable_base_id": "ID base Airtable (bukan rahasia). Token Airtable disimpan di GitHub Secrets dengan nama AIRTABLE_TOKEN.",
+
+  "nama_organisasi": "Fajar Sikka",
+  "tahun_berdiri": 2018,
+  "zona_waktu": "Asia/Makassar"
+}

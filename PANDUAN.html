@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan Website Fajar Sikka</title>
+<link rel="icon" href="assets/logo/favicon-32.png">
+<style>
+:root{--emas:#C98601;--emas-tua:#8A5B00;--emas-muda:#F6EAD0;--tinta:#1C1A17;--tinta-2:#4B463E;--kertas:#F7F7F7;--garis:#E3DFD6;--laut:#12383C;--hijau:#1F6B3A;--merah:#9B2C1F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--kertas);color:var(--tinta);font:16.5px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--emas-tua)}
+header{background:var(--tinta);color:#fff;padding:2.5rem 1.25rem}
+header .w{display:flex;gap:1.25rem;align-items:center}
+header img{width:64px;height:64px}
+header h1{margin:0;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.01em}
+header p{margin:.25rem 0 0;color:rgba(255,255,255,.75)}
+.w{max-width:1100px;margin:0 auto}
+.tata{display:grid;gap:2rem;padding:2rem 1.25rem 5rem}
+@media(min-width:960px){.tata{grid-template-columns:240px 1fr;gap:3rem}nav.isi{position:sticky;top:1.5rem;align-self:start}}
+nav.isi{font-size:.95rem}
+nav.isi p{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;color:var(--emas-tua);margin:0 0 .5rem}
+nav.isi ol{margin:0;padding-left:1.2rem}
+nav.isi li{margin:.3rem 0}
+nav.isi a{color:var(--tinta);text-decoration:none}
+nav.isi a:hover{color:var(--emas-tua);text-decoration:underline}
+section{background:#fff;border-radius:14px;padding:1.75rem 1.75rem 1.25rem;margin-bottom:1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px -14px rgba(0,0,0,.2);border-top:4px solid var(--emas)}
+h2{margin:0 0 .75rem;font-size:1.5rem}
+h3{margin:1.5rem 0 .5rem;font-size:1.12rem}
+ol.langkah{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.langkah>li{counter-increment:s;position:relative;padding:0 0 1.1rem 2.9rem;margin-bottom:.4rem;border-left:2px solid var(--garis);margin-left:1rem}
+ol.langkah>li:last-child{border-left-color:transparent}
+ol.langkah>li::before{content:counter(s);position:absolute;left:-1.05rem;top:-.1rem;width:2rem;height:2rem;border-radius:50%;background:var(--emas);color:var(--tinta);font-weight:700;display:grid;place-items:center}
+ol.langkah>li>strong:first-child{display:block;font-size:1.05rem}
+code,kbd{background:var(--emas-muda);padding:.1em .4em;border-radius:5px;font:600 .9em ui-monospace,SFMono-Regular,Menlo,monospace}
+kbd{background:#eee;border:1px solid #ccc;border-bottom-width:2px}
+.catatan{background:var(--emas-muda);border-radius:10px;padding:.9rem 1.1rem;margin:1rem 0}
+.penting{background:#FBE9E6;border-left:4px solid var(--merah);border-radius:0 10px 10px 0;padding:.9rem 1.1rem;margin:1rem 0}
+.oke{background:#E6F2EA;border-left:4px solid var(--hijau);border-radius:0 10px 10px 0;padding:.9rem 1.1rem;margin:1rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0 1rem;font-size:.95rem}
+th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--garis);vertical-align:top}
+th{background:var(--kertas);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+td code{word-break:break-all}
+.alur{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0}
+.alur span{background:var(--kertas);border:1px solid var(--garis);border-radius:10px;padding:.6rem .9rem;font-weight:600}
+.alur b{color:var(--emas)}
+.bantu{background:var(--laut);color:#fff;border-radius:14px;padding:1.5rem;margin:1rem 0}
+.bantu label{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#F3D58E;margin:.75rem 0 .3rem}
+.bantu input{width:100%;padding:.75rem .9rem;border-radius:10px;border:0;font:inherit}
+.bantu .baris{display:grid;gap:0 1rem}
+@media(min-width:700px){.bantu .baris{grid-template-columns:1fr 1fr 1fr}}
+#hasil{background:#fff;color:var(--tinta);border-radius:10px;padding:1.25rem;margin-top:1.25rem}
+#hasil h3:first-child{margin-top:0}
+.salin{font:600 .78rem system-ui;border:1.5px solid var(--emas);background:#fff;color:var(--emas-tua);border-radius:999px;padding:.2rem .6rem;cursor:pointer;margin-left:.3rem}
+.galat{color:#FFD2CC;margin:.75rem 0 0;font-size:.95rem}
+footer{text-align:center;color:var(--tinta-2);font-size:.9rem;padding:0 1rem 3rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="w">
+    <img src="assets/logo/logo-emas-96.png" alt="">
+    <div>
+      <h1>Panduan Website Fajar Sikka</h1>
+      <p>Pemasangan pertama · Mengisi konten di Airtable · Memasang domain sendiri</p>
+    </div>
+  </div>
+</header>
+
+<div class="w tata">
+<nav class="isi" aria-label="Daftar isi">
+  <p>Daftar isi</p>
+  <ol>
+    <li><a href="#cara-kerja">Cara kerja</a></li>
+    <li><a href="#pasang">Pemasangan pertama</a></li>
+    <li><a href="#konten">Mengisi konten</a></li>
+    <li><a href="#domain">Memasang domain sendiri</a></li>
+    <li><a href="#penting">Hal penting</a></li>
+    <li><a href="#masalah">Jika ada masalah</a></li>
+  </ol>
+</nav>
+
+<main>
+<section id="cara-kerja">
+  <h2>1. Cara kerja</h2>
+  <p>Website ini hanya memakai tiga layanan: <strong>Airtable</strong> (tempat menulis konten), <strong>GitHub</strong> (menyimpan kode, membangun, dan menampilkan website — gratis), dan <strong>domain</strong> (opsional, bisa dipasang kapan saja).</p>
+  <div class="alur"><span>Tulis di Airtable</span><b>→</b><span>GitHub membangun website<br><small>otomatis 06:07 &amp; 18:07 WITA</small></span><b>→</b><span>Website tayang</span></div>
+  <p>Perubahan di Airtable <strong>tidak langsung</strong> muncul. Website diperbarui otomatis dua kali sehari. Kalau ingin segera tampil, tekan tombol <em>Run workflow</em> (lihat <a href="#terbitkan-manual">cara menerbitkan manual</a>) — sekitar 2–3 menit kemudian website sudah berubah.</p>
+</section>
+
+<section id="pasang">
+  <h2>2. Pemasangan pertama (sekali saja)</h2>
+  <p>Butuh waktu sekitar 20 menit. Anda perlu akun GitHub (gratis) dan akses ke base Airtable <em>Fajar Sikka</em>.</p>
+  <ol class="langkah">
+    <li><strong>Buat repositori di GitHub</strong>
+      Masuk ke <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>. Isi nama, misalnya <code>fajar-sikka</code>, pilih <strong>Public</strong> (wajib untuk hosting gratis), lalu klik <em>Create repository</em>.</li>
+    <li><strong>Unggah semua berkas website</strong>
+      Di halaman repositori baru, klik <em>uploading an existing file</em>, lalu seret <strong>seluruh isi folder</strong> website ini (bukan file ZIP-nya). Klik <em>Commit changes</em>.
+      <div class="penting"><strong>Pastikan folder <code>.github</code> ikut terunggah.</strong> Folder ini tersembunyi di sebagian komputer. Di Mac tekan <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>.</kbd> untuk menampilkannya; di Windows aktifkan <em>View → Hidden items</em>. Jika ragu, pakai aplikasi <a href="https://desktop.github.com" target="_blank" rel="noopener">GitHub Desktop</a>.</div></li>
+    <li><strong>Buat token Airtable</strong>
+      Buka <a href="https://airtable.com/create/tokens" target="_blank" rel="noopener">airtable.com/create/tokens</a> → <em>Create token</em>. Beri nama <code>Website Fajar Sikka</code>. Pada <em>Scopes</em> tambahkan <code>data.records:read</code> saja. Pada <em>Access</em> pilih base <strong>Fajar Sikka</strong>. Klik <em>Create token</em> dan <strong>salin</strong> tokennya (diawali <code>pat</code>).
+      <div class="catatan">Token hanya bisa <em>membaca</em>. Jangan bagikan token di chat atau dokumen publik.</div></li>
+    <li><strong>Simpan token di GitHub</strong>
+      Di repositori: <em>Settings</em> → <em>Secrets and variables</em> → <em>Actions</em> → <em>New repository secret</em>. Name: <code>AIRTABLE_TOKEN</code>, Secret: tempel token tadi → <em>Add secret</em>.</li>
+    <li><strong>Aktifkan GitHub Pages</strong>
+      <em>Settings</em> → <em>Pages</em> → pada <em>Build and deployment</em>, bagian <em>Source</em> pilih <strong>GitHub Actions</strong>.</li>
+    <li id="terbitkan-manual"><strong>Terbitkan pertama kali</strong>
+      Buka tab <em>Actions</em> (jika diminta, klik tombol hijau untuk mengaktifkan workflow) → pilih <em>Bangun &amp; terbitkan website</em> di kiri → <em>Run workflow</em> → <em>Run workflow</em>. Tunggu sampai tanda centang hijau (±3 menit).</li>
+    <li><strong>Buka website Anda</strong>
+      Alamatnya: <code>https://<em>nama-akun-github</em>.github.io/fajar-sikka/</code> (juga tertera di <em>Settings → Pages</em>).
+      <div class="oke">Selesai! Mulai sekarang website diperbarui otomatis dua kali sehari dari Airtable.</div></li>
+  </ol>
+</section>
+
+<section id="konten">
+  <h2>3. Mengisi konten di Airtable</h2>
+  <table>
+    <thead><tr><th>Tabel</th><th>Untuk</th><th>Tampil jika</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Artikel</strong></td><td>Kabar / blog</td><td>Status <code>Terbit</code> dan Tanggal Terbit sudah tiba</td></tr>
+      <tr><td><strong>Galeri</strong></td><td>Album foto kegiatan</td><td>Status <code>Terbit</code> <strong>dan</strong> <code>Izin Publikasi</code> dicentang</td></tr>
+      <tr><td><strong>Program</strong></td><td>Program &amp; kegiatan</td><td>Status <code>Terbit</code> (foto tampil hanya jika <code>Izin Foto</code> dicentang)</td></tr>
+      <tr><td><strong>Mitra</strong></td><td>Halaman Mitra</td><td><code>Tampilkan</code> dicentang</td></tr>
+      <tr><td><strong>Pengurus</strong></td><td>Halaman Tentang</td><td><code>Tampilkan</code> dicentang</td></tr>
+      <tr><td><strong>Pengaturan</strong></td><td>Teks beranda, profil, kontak, donasi</td><td>Selalu. <strong>Jangan ubah kolom Kunci</strong>, cukup ubah <em>Isi ID</em> / <em>Isi EN</em></td></tr>
+      <tr><td><strong>Kategori</strong></td><td>Kategori artikel</td><td>Dipakai oleh artikel</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Menulis artikel</h3>
+  <ol>
+    <li>Tambah baris di tabel <strong>Artikel</strong>, isi Judul, Ringkasan (1–2 kalimat, muncul di Google), dan Isi.</li>
+    <li>Unggah <strong>Foto Sampul</strong> dan isi <strong>Keterangan Foto Sampul</strong> (penting untuk Google dan pembaca tunanetra).</li>
+    <li>Untuk foto di tengah tulisan, unggah ke <strong>Foto Artikel</strong> lalu ketik <code>[foto:1]</code>, <code>[foto:2]</code>, dst. pada baris tersendiri di Isi.</li>
+    <li>Centang <strong>Izin Foto</strong> hanya jika semua orang di foto setuju.</li>
+    <li>Ingin versi Inggris? Isi <strong>Judul EN</strong> dan <strong>Isi EN</strong>. Tanpa keduanya, artikel hanya tampil di versi Indonesia.</li>
+    <li>Ubah Status menjadi <strong>Terbit</strong>. Lihat baris <em>Contoh artikel</em> (berstatus Draf) sebagai contoh format.</li>
+  </ol>
+  <div class="catatan"><strong>Kolom Slug</strong> adalah bagian alamat halaman (mis. <code>/kabar/pelatihan-tenun/</code>). Boleh dikosongkan — akan dibuat otomatis dari judul. Setelah terbit, <strong>jangan diubah</strong> agar tautan yang sudah dibagikan tidak rusak.</div>
+
+  <h3>Donasi</h3>
+  <p>Di tabel <strong>Pengaturan</strong>, isi <code>rekening_bank</code>, <code>rekening_nomor</code>, dan <code>rekening_nama</code>. Selama kosong, halaman <em>Dukung Kami</em> otomatis menampilkan kontak email &amp; WhatsApp saja.</p>
+
+  <h3>Tips foto</h3>
+  <ul>
+    <li>Kecilkan foto ke lebar maksimal ±2000 piksel sebelum diunggah. Kuota Airtable gratis hanya 1 GB per base.</li>
+    <li>Gunakan JPG atau PNG. Foto iPhone format HEIC tidak bisa diproses — ubah ke JPG dulu (di iPhone: <em>Settings → Camera → Formats → Most Compatible</em>).</li>
+    <li>Website otomatis mengubah foto menjadi format WebP yang ringan untuk jaringan seluler.</li>
+  </ul>
+</section>
+
+<section id="domain">
+  <h2>4. Memasang domain sendiri</h2>
+  <p>Website sudah bisa dipakai dengan alamat <code>github.io</code>. Kapan pun domain sudah dibeli (mis. <code>fajarsikka.org</code>), ikuti langkah di bawah. <strong>Tidak perlu mengubah kode apa pun</strong> — website mendeteksi alamat barunya sendiri.</p>
+
+  <div class="bantu">
+    <strong>Pembantu pengaturan domain</strong> — isi kolom di bawah, langkah-langkahnya akan disesuaikan otomatis.
+    <div class="baris">
+      <div><label for="dom">Domain yang dibeli</label><input id="dom" placeholder="fajarsikka.org" autocomplete="off"></div>
+      <div><label for="akun">Nama akun GitHub</label><input id="akun" placeholder="nama-akun" autocomplete="off"></div>
+      <div><label for="repo">Nama repositori</label><input id="repo" value="fajar-sikka" autocomplete="off"></div>
+    </div>
+    <p class="galat" id="galat" hidden></p>
+    <div id="hasil" hidden></div>
+  </div>
+
+  <ol class="langkah" id="langkah-domain">
+    <li><strong>Atur DNS di tempat membeli domain</strong>
+      Masuk ke panel penjual domain (Niagahoster, Rumahweb, Namecheap, Cloudflare, dll.) → menu <em>DNS / Kelola DNS</em>. Hapus catatan A/AAAA lama untuk <code>@</code> jika ada, lalu tambahkan catatan pada tabel di atas.</li>
+    <li><strong>Pasang domain di GitHub</strong>
+      Repositori → <em>Settings</em> → <em>Pages</em> → <em>Custom domain</em> → ketik domain Anda → <em>Save</em>. Tunggu pemeriksaan DNS berhasil (bisa beberapa menit hingga 24 jam).</li>
+    <li><strong>Aktifkan HTTPS</strong>
+      Setelah pemeriksaan berhasil, centang <em>Enforce HTTPS</em> di halaman yang sama.</li>
+    <li><strong>Bangun ulang website</strong>
+      Tab <em>Actions</em> → <em>Bangun &amp; terbitkan website</em> → <em>Run workflow</em>. Seluruh tautan, sitemap, dan data Google otomatis memakai domain baru.</li>
+    <li><strong>Daftarkan ke Google</strong>
+      Buka <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a>, tambahkan domain, lalu kirim sitemap: <code id="sitemap-url">https://domain-anda/sitemap.xml</code>.</li>
+  </ol>
+  <div class="catatan"><strong>Opsional (lebih aman):</strong> verifikasi domain di akun GitHub (<em>profil → Settings → Pages → Add a domain</em>) agar domain tidak bisa dipakai orang lain jika suatu saat website dimatikan.</div>
+  <div class="catatan"><strong>Untuk teknisi:</strong> jika ingin memaksa alamat tertentu (mis. hosting di tempat lain), isi <code>"alamat_website"</code> di berkas <code>site.config.json</code>. Biarkan kosong untuk deteksi otomatis.</div>
+</section>
+
+<section id="penting">
+  <h2>5. Hal penting</h2>
+  <ul>
+    <li><strong>Privasi &amp; keamanan komunitas.</strong> Foto hanya tampil bila kolom izin dicentang. Periksa juga isi tulisan: jangan menyebut nama, alamat, atau identitas anggota tanpa persetujuan.</li>
+    <li><strong>Jadwal otomatis bisa berhenti.</strong> GitHub menonaktifkan jadwal otomatis pada repositori yang 60 hari tidak ada perubahan kode. GitHub akan mengirim email peringatan — cukup buka tab <em>Actions</em> dan klik <em>Enable workflow</em>, atau jalankan <em>Run workflow</em> sesekali.</li>
+    <li><strong>Batas Airtable gratis:</strong> 1.000 baris per base, 1 GB lampiran, 1.000 panggilan API per bulan. Satu kali build memakai ±7 panggilan, jadi 2× sehari + beberapa kali manual masih aman. Airtable juga memiliki program diskon untuk organisasi nirlaba.</li>
+    <li><strong>Kalau Airtable bermasalah</strong>, website yang sudah tayang tetap berjalan normal — build berikutnya saja yang tertunda.</li>
+  </ul>
+</section>
+
+<section id="masalah">
+  <h2>6. Jika ada masalah</h2>
+  <table>
+    <thead><tr><th>Gejala</th><th>Penyebab &amp; solusi</th></tr></thead>
+    <tbody>
+      <tr><td>Konten baru tidak muncul</td><td>Tunggu jadwal berikutnya atau jalankan <em>Run workflow</em>. Pastikan Status = <code>Terbit</code> dan tanggal terbit tidak di masa depan.</td></tr>
+      <tr><td>Foto tidak muncul</td><td>Kolom <em>Izin Foto</em>/<em>Izin Publikasi</em> belum dicentang, atau format HEIC. Detailnya ada di catatan build (tab <em>Actions</em> → klik build terakhir → langkah <em>Bangun website dari Airtable</em>, baris bertanda ⚠).</td></tr>
+      <tr><td>Build gagal (tanda silang merah)</td><td>Paling sering: token Airtable salah/kedaluwarsa. Buat token baru dan perbarui secret <code>AIRTABLE_TOKEN</code>.</td></tr>
+      <tr><td>Website menampilkan konten contoh</td><td>Secret <code>AIRTABLE_TOKEN</code> belum diatur atau salah nama.</td></tr>
+      <tr><td>Domain belum jalan</td><td>DNS butuh waktu hingga 24 jam. Cek ulang catatan DNS di atas, lalu <em>Run workflow</em> sekali lagi.</td></tr>
+    </tbody>
+  </table>
+</section>
+</main>
+</div>
+<footer>Website Fajar Sikka · Airtable + GitHub Pages</footer>
+
+<script>
+(function(){
+  var A=["185.199.108.153","185.199.109.153","185.199.110.153","185.199.111.153"];
+  var AAAA=["2606:50c0:8000::153","2606:50c0:8001::153","2606:50c0:8002::153","2606:50c0:8003::153"];
+  var dom=document.getElementById("dom"),akun=document.getElementById("akun"),repo=document.getElementById("repo");
+  var hasil=document.getElementById("hasil"),galat=document.getElementById("galat");
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function bersih(d){return d.trim().toLowerCase().replace(/^https?:\/\//,"").replace(/\/.*$/,"").replace(/^www\./,"");}
+  function baris(tipe,nama,nilai){return "<tr><td>"+tipe+"</td><td><code>"+esc(nama)+"</code></td><td><code>"+esc(nilai)+"</code> <button class='salin' type='button' data-v='"+esc(nilai)+"'>Salin</button></td></tr>";}
+  function render(){
+    var d=bersih(dom.value),u=akun.value.trim().toLowerCase().replace(/^@/,""),r=repo.value.trim()||"fajar-sikka";
+    galat.hidden=true;
+    if(!d&&!u){hasil.hidden=true;return;}
+    if(d&&!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(d)){galat.textContent="Format domain belum benar. Contoh: fajarsikka.org";galat.hidden=false;hasil.hidden=true;return;}
+    var h="";
+    if(u){h+="<h3>Alamat sementara (sebelum domain)</h3><p><a href='https://"+esc(u)+".github.io/"+esc(r)+"/' target='_blank' rel='noopener'>https://"+esc(u)+".github.io/"+esc(r)+"/</a></p>";}
+    if(d){
+      var sub=d.split(".").length>2&&!/\.(co|or|ac|go|web|my|sch|net|biz)\.id$/.test(d)&&!/\.(co|or|ac)\.[a-z]{2}$/.test(d);
+      h+="<h3>Catatan DNS yang perlu ditambahkan</h3><table><thead><tr><th>Tipe</th><th>Nama / Host</th><th>Nilai / Isi</th></tr></thead><tbody>";
+      if(sub){
+        h+=baris("CNAME",d.split(".")[0],(u||"nama-akun")+".github.io");
+      }else{
+        A.forEach(function(a){h+=baris("A","@",a);});
+        AAAA.forEach(function(a){h+=baris("AAAA","@",a);});
+        h+=baris("CNAME","www",(u||"nama-akun")+".github.io");
+      }
+      h+="</tbody></table>";
+      if(sub)h+="<p>Anda memakai subdomain, jadi cukup satu catatan CNAME.</p>";
+      else h+="<p>Catatan <code>AAAA</code> boleh dilewati jika panel DNS tidak menyediakannya.</p>";
+      h+="<h3>Di GitHub → Settings → Pages → Custom domain, ketik:</h3><p><code>"+esc(d)+"</code> <button class='salin' type='button' data-v='"+esc(d)+"'>Salin</button></p>";
+      h+="<p>Setelah semua selesai, website Anda: <strong>https://"+esc(d)+"/</strong></p>";
+      document.getElementById("sitemap-url").textContent="https://"+d+"/sitemap.xml";
+    }
+    hasil.innerHTML=h;hasil.hidden=false;
+  }
+  [dom,akun,repo].forEach(function(i){i.addEventListener("input",render);});
+  hasil.addEventListener("click",function(e){
+    var b=e.target.closest(".salin");if(!b)return;
+    var v=b.getAttribute("data-v");
+    (navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(function(){b.textContent="✓ Tersalin";setTimeout(function(){b.textContent="Salin";},1500);},function(){prompt("Salin nilai ini:",v);});
+  });
+})();
+</script>
+</body>
+</html>
