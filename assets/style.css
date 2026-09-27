@@ -321,3 +321,121 @@ address { font-style: normal; }
 .kaki-bawah p { margin: 0; }
 
 @media print { .kepala, .kaki, .cta, .bagikan { display: none; } body { background: #fff; } }
+
+/* ---------- visi-misi-motto & tujuan-sasaran (halaman Tentang) ---------- */
+.sub-tengah { text-align: center; font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; color: #F3D58E; margin: 0 0 1.5rem; font-weight: 600; }
+.misi-grid { list-style: none; counter-reset: m; padding: 0; margin: 0; display: grid; gap: 1rem; }
+@media (min-width: 900px) { .misi-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+.misi-grid li { counter-increment: m; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .12); border-top: 3px solid var(--emas); border-radius: 12px; padding: 1.4rem 1.4rem 1.5rem; color: rgba(255, 255, 255, .9); }
+.misi-grid li::before { content: counter(m, decimal-leading-zero); display: block; font: 600 1.6rem/1 var(--judul); color: var(--emas); margin-bottom: .75rem; }
+.tujuan-grid { list-style: none; counter-reset: tj; padding: 0; margin: 0 0 2.5rem; display: grid; gap: 1rem; }
+@media (min-width: 900px) { .tujuan-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+.tujuan-grid li { counter-increment: tj; background: var(--kertas); border: 1px solid var(--garis); border-radius: 12px; padding: 1.4rem 1.4rem 1.5rem; }
+.tujuan-grid li::before { content: counter(tj, decimal-leading-zero); display: block; font: 600 1.6rem/1 var(--judul); color: var(--emas); margin-bottom: .75rem; }
+.sasaran { background: var(--emas-muda); border-left: 5px solid var(--emas); border-radius: 0 12px 12px 0; padding: 1.5rem 1.75rem; }
+.sasaran .label { margin-bottom: .5rem; }
+.sasaran-teks { font: 500 clamp(1.15rem, 2.4vw, 1.45rem)/1.45 var(--judul); margin: 0; color: var(--tinta); }
+.bagian-putih .judul-bagian { margin-bottom: .5rem; }
+
+/* ==========================================================
+   Tampilan ponsel (≤ 640px)
+   ========================================================== */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wadah { width: min(100% - 2.25rem, var(--lebar)); }
+  .kepala-dalam { min-height: 64px; }
+  .merek img { width: 34px; height: 34px; }
+  .bagian { padding-block: 3rem; }
+  h2 { font-size: 1.55rem; }
+
+  /* hero */
+  .hero { min-height: 82svh; }
+  .hero-isi { padding-block: 5rem 2.5rem; }
+  .hero h1 { font-size: clamp(2.3rem, 11vw, 3rem); }
+  .hero-teks { font-size: 1.02rem; }
+  .hero-hal { min-height: 300px; }
+  .hero-hal-isi { padding-block: 4.5rem 2rem; }
+  .hero-hal h1 { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+  .hero-hal-intro { font-size: 1rem; }
+  .label { font-size: .7rem; letter-spacing: .18em; }
+  .label::before { width: 1.25rem; }
+
+  /* tombol penuh lebar agar mudah disentuh */
+  .aksi { flex-direction: column; align-items: stretch; }
+  .aksi .btn { width: 100%; }
+
+  /* angka dampak */
+  .angka-list { grid-template-columns: 1fr 1fr; gap: 1.25rem 1rem; padding-block: 1.75rem; }
+  .angka-list li { padding-left: .75rem; }
+  .angka-ket { font-size: .85rem; }
+
+  /* kepala bagian: tautan "Lihat semua" di bawah judul */
+  .bagian-kepala { flex-direction: column; align-items: flex-start; gap: .75rem; margin-bottom: 1.5rem; }
+
+  /* kartu */
+  .grid { gap: 1rem; }
+  .kartu-isi { padding: 1.15rem 1.2rem 1.3rem; }
+  .kartu-judul { font-size: 1.12rem; }
+  .kartu-foto { aspect-ratio: 16 / 10; }
+  .kartu:hover { transform: none; }
+  .motto-kartu { padding: 1.75rem 1.5rem; }
+  .motto-logo { width: 64px; height: 64px; }
+
+  /* saring (chip) bisa digeser ke samping */
+  .saring { flex-wrap: nowrap; overflow-x: auto; margin-inline: -1.125rem; padding: 0 1.125rem .5rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .saring::-webkit-scrollbar { display: none; }
+  .chip-btn { flex: none; white-space: nowrap; }
+
+  /* pita foto lanskap */
+  .pita-item { aspect-ratio: 1; }
+
+  /* mitra */
+  .mitra-pita { gap: .5rem; }
+  .mitra-pita li { font-size: .9rem; padding: .55rem .9rem; }
+
+  /* tentang */
+  .visi { margin-bottom: 2.25rem; }
+  .visi-teks { font-size: 1.5rem; }
+  .misi-grid li, .tujuan-grid li { padding: 1.15rem 1.2rem 1.25rem; }
+  .misi-grid li::before, .tujuan-grid li::before { font-size: 1.3rem; margin-bottom: .5rem; }
+  .motto-baris { font-size: 1.05rem; margin-top: 2.25rem; }
+  .sasaran { padding: 1.25rem 1.25rem; }
+  .logo-makna > img { width: 180px; }
+  .orang-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+  .orang-foto { width: 88px; height: 88px; }
+  .orang-inisial { font-size: 1.5rem; }
+
+  /* program & artikel */
+  .meta-daftar { grid-template-columns: 1fr 1fr; padding: 1.1rem 1.2rem; gap: 1rem; }
+  .prosa { font-size: 1.02rem; }
+  .prosa h2 { font-size: 1.4rem; }
+  .prosa blockquote { font-size: 1.12rem; padding-left: 1rem; }
+  .artikel-kepala { padding-block: 2.5rem 1.5rem; text-align: left; }
+  .artikel-kepala h1 { font-size: 1.85rem; }
+  .artikel-ringkas { font-size: 1.05rem; margin-inline: 0; }
+  .sampul { border-radius: 10px; margin-bottom: 1.75rem; }
+  .foto-artikel img { max-height: 70vh; }
+  .grid-foto { gap: .4rem; }
+  .grid-foto li { border-radius: 6px; }
+  .grid-foto:not(.grid-foto-album) li:only-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .bagikan span { width: 100%; margin-bottom: .25rem; }
+
+  /* donasi & kontak */
+  .kartu-donasi .kartu-isi { padding: 1.5rem 1.25rem; }
+  .rekening dd { font-size: 1.1rem; }
+  .form-airtable { height: 900px; }
+
+  /* CTA */
+  .cta-foto::after { background: rgba(18, 56, 60, .9); }
+  .cta h2 { font-size: 1.75rem; }
+
+  /* kaki: navigasi dua kolom agar tidak terlalu panjang */
+  .kaki-grid { padding-block: 3rem 2rem; gap: 2rem; }
+  .kaki-grid > div:nth-child(2) .kaki-list { grid-template-columns: 1fr 1fr; column-gap: 1rem; }
+  .kaki-list a { display: inline-block; padding-block: .2rem; }
+  .kaki-bawah { flex-direction: column; }
+}
+@media (max-width: 360px) {
+  .angka-list { grid-template-columns: 1fr; }
+  .meta-daftar { grid-template-columns: 1fr; }
+}
